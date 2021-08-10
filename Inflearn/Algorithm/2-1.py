@@ -1,9 +1,13 @@
 N, K = map(int, input().split())
-a = list()
+cnt = 0 
 for i in range(N):
     if N % (i+1) == 0:
-        a.append(i+1)
-print(a[K-1])
+        cnt += 1 
+    if cnt == K:
+        print(i+1)
+        break
+else: 
+    print(-1)
 
 '''
 인프런 파이썬 알고리즘 문제풀이, 2-1 K번째 약수
